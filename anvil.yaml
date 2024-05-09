@@ -1,7 +1,28 @@
 allow_embedding: false
 package_name: Material_Design_2
+db_schema:
+  feedback:
+    client: none
+    server: full
+    columns:
+    - name: name
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: email
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: feedback
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: created_on
+      admin_ui: {order: 3, width: 200}
+      type: datetime
+    title: feedback
 name: Material Design 2
 startup_form: Form1
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-services: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}

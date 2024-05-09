@@ -1,5 +1,9 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 
 
 class Form1(Form1Template):
@@ -8,3 +12,17 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    Name = self.name_box
+    Email = self.email_box.text
+    feedback = self.feedback_box.text
+
+anvil.server.call('add_feedback', name, email, feedback)
+Notification("Feedback Submitted!").show()
+self.clear_inputs()
+
+def clear_inputs(self):
+  self.name_box.text=""
+  self.email_box.text=""
+  self.feedback_box.text="" 
