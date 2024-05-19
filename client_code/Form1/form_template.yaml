@@ -41,11 +41,19 @@ components:
     properties: {placeholder: Please enter your Feedback, visible: true}
     type: TextArea
     layout_properties: {grid_position: 'LTYHUE,DHNQLX'}
+  - name: button_2
+    properties: {text: Prevoius Page, icon: 'fa:angle-double-left'}
+    type: Button
+    layout_properties: {grid_position: 'HEUBWD,RLCYFS'}
   - name: button_1
-    properties: {text: SUBMIT}
+    properties: {text: SUBMIT, icon: 'fa:upload'}
     type: Button
     layout_properties: {grid_position: 'HEUBWD,ZPGBDR'}
     event_bindings: {click: button_1_click}
+  - name: button_3
+    properties: {text: Next Page, icon: 'fa:angle-double-right', icon_align: right}
+    type: Button
+    layout_properties: {grid_position: 'HEUBWD,ZNCROW'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
